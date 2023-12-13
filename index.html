@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국폴리텍 주식회사</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* 전체 문서에 적용되는 폰트 설정 */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* 배경 색상 설정 */
+        }
+
+        header {
+            background-color: #3856aa; /* 헤더 배경 색상 설정 */
+            color: #fff; /* 헤더 텍스트 색상 설정 */
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #6b82a5; /* 네비게이션 바 배경 색상 설정 */
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff; /* 네비게이션 바 링크 텍스트 색상 설정 */
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 0.5em;
+            display: inline-block;
+        }
+
+        #slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        section {
+            padding: 2em; /* 섹션 간격 설정 */
+        }
+
+        section h2 {
+            color: #333; /* 섹션 제목 텍스트 색상 설정 */
+        }
+
+        footer {
+            background-color: #333; /* 푸터 배경 색상 설정 */
+            color: #fff; /* 푸터 텍스트 색상 설정 */
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 헤더 부분 -->
+    <header>
+        <h1>(주)한국폴리텍</h1>
+    </header>
+
+    <!-- 네비게이션 바 부분 -->
+    <nav>
+        <a href="#home">홈</a>
+        <a href="#about">회사 소개</a>
+        <a href="#services">사업분야</a>
+        <a href="#team">채용</a>
+        <a href="#contact">문의</a>
+    </nav>
+
+    <!-- 홈 섹션 부분 -->
+    <section id="home">
+        <div id="slideshow-container">
+            <div class="slide">
+                <img src="images\회사 인지도1.jpg" alt="슬라이드 1">
+            </div>
+            <div class="slide">
+                <img src="images\thumb_520390_1483079064_25.jpg" alt="슬라이드 2">
+            </div>
+            <!-- 필요에 따라 더 많은 슬라이드 추가 -->
+        </div>
+    </section>
+
+    <!-- 회사 소개 섹션 부분 -->
+    <section id="about">
+        <h2>회사 소개</h2>
+        <p>한국폴리텍 주식회사에 오신 것을 환영합니다. 우리는 고객에게 우수한 서비스를 제공하기 위해 노력하고 있습니다.</p>
+    </section>
+
+    <!-- 사업분야 섹션 부분 -->
+    <section id="services">
+        <h2>사업분야</h2>
+        <ul>
+            <li>반도체</li>
+            <li>IOT소프트웨어</li>
+            <li>인공지능</li>
+        </ul>
+    </section>
+
+    <!-- 채용 섹션 부분 -->
+    <section id="team">
+        <h2>채용</h2>
+        <p>한국폴리텍의 채용과정은 다음과 같습니다.</p>
+    </section>
+
+    <!-- 문의 섹션 부분 -->
+    <section id="contact">
+        <h2>문의하기</h2>
+        <p>문의나 협업 기회에 대해 언제든지 연락해 주세요.</p>
+
+    </section>
+
+    <!-- 푸터 부분 -->
+    <footer>
+        &copy; 2023 주식회사 한국폴리텍. ALL RIGHTS RESERVED.
+    </footer>
+
+    <!-- 자바스크립트 부분 -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("slide");
+
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex].style.display = "block";
+            slideIndex++;
+
+            setTimeout(showSlides, 3000); // 3초마다 슬라이드 변경
+        }
+    </script>
+
+</body>
+</html>
